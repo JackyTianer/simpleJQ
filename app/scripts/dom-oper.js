@@ -1,10 +1,9 @@
 ///**
 // * Created by jackytianer on 15/4/28.
 // */
-define(function(require) {
     'use strict';
 
-    var $ = require('selector');
+    var $;
 
     function addClass(element, newClassName) {
         return element.className.concat(' ', newClassName);
@@ -14,7 +13,6 @@ define(function(require) {
         return element.className.replace(oldClassName, '');
     }
 
-    $.prototype.addClass = addClass;
-    $.prototype.removeClass = removeClass;
-});
+    $.addClass = addClass;
+    $.removeClass = removeClass;
 

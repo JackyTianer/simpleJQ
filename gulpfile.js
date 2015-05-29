@@ -16,18 +16,12 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('dist/scripts'));
 });
 
-
-
 gulp.task('jshint', function () {
     return gulp.src(['app/scripts/**/*.js'])
         .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('default'))
         .pipe(jscs());
 });
-
-
-
-
 
 gulp.task('default', function () {
     //监听
